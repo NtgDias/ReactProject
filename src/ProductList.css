@@ -163,7 +163,27 @@ body {
 .cart{
     color: white;
     display: flex;
+
+    position: relative;
+    display: inline-block;
 }
+
+.cart-count{
+    position: absolute;
+    top: 40%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição exata */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border-radius: 50%;*/
+}
+
 .cart_quantity_count{
     margin-top: 16px;
     /* background-color: red; */
@@ -172,6 +192,38 @@ body {
     font-size: 29px;
 
 }
+
+.category-title-container {
+    text-align: center; /* Garante que tudo dentro fique centralizado */
+    margin: 20px 0; /* Espaçamento externo */
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block; /* Mantém o tamanho do texto */
+    position: relative; /* Permite adicionar as linhas */
+    padding: 10px 20px; /* Adiciona um pequeno espaçamento lateral */
+}
+
+.category-title::before,
+.category-title::after {
+    content: ""; /* Cria as linhas */
+    position: absolute;
+    left: 0;
+    width: 300%; /* Faz as linhas ficarem ligeiramente maiores que o texto */
+    height: 1.5px;
+    background-color: black;
+}
+
+.category-title::before {
+    top: 0; /* Linha superior */
+}
+
+.category-title::after {
+    bottom: 0; /* Linha inferior */
+}
+
 .plantname_heading{
    display: flex;
    align-items: center;
